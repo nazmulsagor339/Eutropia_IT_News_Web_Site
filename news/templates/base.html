@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>News Website</h1>
+        <nav>
+            <ul>
+                {% block trevers %}<li><a href="{% url 'news_list' %}">News</a></li>{% endblock %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        &copy; 2023 News Website
+    </footer>
+</body>
+</html>
